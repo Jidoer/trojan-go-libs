@@ -20,4 +20,7 @@ jobs:
  #   - name: Grant execute permission for gradlew
  #     run: 
     - name: Build with Gradle
-      run: echo "$pwd"
+      run: |
+            pwd
+            echo {$pwd}
+           
