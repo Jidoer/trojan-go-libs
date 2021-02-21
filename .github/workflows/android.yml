@@ -22,6 +22,19 @@ jobs:
     - name: Build with Gradle
       run: |
             pwd
-            echo $pwd
             echo $ANDROID_HOME
+            apt-get install golang-go
+            export GOPATH=$HOME/go
+            go get -u -d -v golang.org/x/mobile/cmd/gomobile
+            go build -a -v golang.org/x/mobile/cmd/gomobile
+            go install -v golang.org/x/mobile/cmd/gomobile
+            # Make sure we can execute gomobile and gobind directly
+            export PATH= /home/runner/work/trojan-go-libs/trojan-go-libs #"$GOPATH/bin:$PATH"
+            gh repo clone kangc666/trojan-go-libs
+            mv trojan-go-libs src
+            cd src
+            pushd /path/to/git/repository/just/cloned
+            make android
+            # prepare gomobile component: gobind
+            gomobile init
            
