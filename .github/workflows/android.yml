@@ -23,7 +23,7 @@ jobs:
       run: |
             pwd
             echo $ANDROID_HOME
-            apt-get install golang-go
+            sudo apt-get install golang-go
             export GOPATH=$HOME/go
             go get -u -d -v golang.org/x/mobile/cmd/gomobile
             go build -a -v golang.org/x/mobile/cmd/gomobile
