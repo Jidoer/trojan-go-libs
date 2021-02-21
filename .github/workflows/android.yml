@@ -28,17 +28,17 @@ jobs:
             pwd
             echo $ANDROID_HOME
             #sudo apt-get install golang-go
-            export GOPATH=$HOME/go
+            export GOPATH=/home/runner/work/trojan-go-libs/trojan-go-libs
             go get -u -d -v golang.org/x/mobile/cmd/gomobile
             go build -a -v golang.org/x/mobile/cmd/gomobile
             go install -v golang.org/x/mobile/cmd/gomobile
             # Make sure we can execute gomobile and gobind directly
-            export PATH=/home/runner/work/trojan-go-libs/trojan-go-libs
+            #export PATH=/home/runner/work/trojan-go-libs/trojan-go-libs
             #sudo apt-get install git
-            git clone https://github.com/kangc666/trojan-go-libs.git
-            mv trojan-go-libs src
-            cd src
-            pushd /path/to/git/repository/just/cloned
+            #git clone https://github.com/kangc666/trojan-go-libs.git
+            #mv trojan-go-libs src
+            #cd src
+            pushd /home/runner/work/trojan-go-libs/trojan-go-libs
             make android
             # prepare gomobile component: gobind
             gomobile init
