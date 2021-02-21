@@ -23,25 +23,16 @@ jobs:
         go-version: ^1.13.8
  #   - name: Grant execute permission for gradlew
  #     run: 
-    - name: Build with Gradle
+    - name: Build AAR
       run: |
             pwd
             echo $ANDROID_HOME
-            #sudo apt-get install golang-go
-            #export GOPATH=/home/runner/work/trojan-go-libs/trojan-go-libs
             echo -----------
             go get -u -d -v golang.org/x/mobile/cmd/gomobile
             go build -a -v golang.org/x/mobile/cmd/gomobile
             go install -v golang.org/x/mobile/cmd/gomobile
-            # Make sure we can execute gomobile and gobind directly
-            #export PATH=/home/runner/work/trojan-go-libs/trojan-go-libs
-            #sudo apt-get install git
-            #git clone https://github.com/kangc666/trojan-go-libs.git
-            #mv trojan-go-libs src
-            #cd src
             pushd /home/runner/work/trojan-go-libs/trojan-go-libs
             gomobile init
             make android
-            # prepare gomobile component: gobind
-            #gomobile init
-           
+            ls -l
+         
