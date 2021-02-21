@@ -17,13 +17,17 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Set up Go 1.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.13.8
  #   - name: Grant execute permission for gradlew
  #     run: 
     - name: Build with Gradle
       run: |
             pwd
             echo $ANDROID_HOME
-            sudo apt-get install golang-go
+            #sudo apt-get install golang-go
             export GOPATH=$HOME/go
             go get -u -d -v golang.org/x/mobile/cmd/gomobile
             go build -a -v golang.org/x/mobile/cmd/gomobile
