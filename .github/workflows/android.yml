@@ -34,8 +34,7 @@ jobs:
             go install -v golang.org/x/mobile/cmd/gomobile
             # Make sure we can execute gomobile and gobind directly
             export PATH=/home/runner/work/trojan-go-libs/trojan-go-libs
-            #"$GOPATH/bin:$PATH"
-            sudo apt-get install git
+            #sudo apt-get install git
             git clone https://github.com/kangc666/trojan-go-libs.git
             mv trojan-go-libs src
             cd src
