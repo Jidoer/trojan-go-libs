@@ -33,7 +33,8 @@ jobs:
             go build -a -v golang.org/x/mobile/cmd/gomobile
             go install -v golang.org/x/mobile/cmd/gomobile
             # Make sure we can execute gomobile and gobind directly
-            export PATH= /home/runner/work/trojan-go-libs/trojan-go-libs #"$GOPATH/bin:$PATH"
+            export PATH=/home/runner/work/trojan-go-libs/trojan-go-libs
+            #"$GOPATH/bin:$PATH"
             gh repo clone kangc666/trojan-go-libs
             mv trojan-go-libs src
             cd src
