@@ -42,5 +42,5 @@ jobs:
             pushd /home/runner/work/trojan-go-libs/trojan-go-libs
             make android
             # prepare gomobile component: gobind
-            gomobile init
+            #gomobile init
            
