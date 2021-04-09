@@ -1,6 +1,6 @@
 # igniter-go-libs
 
-## How to build
+## How to build it？
 
 ### Prerequirements
 
