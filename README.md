@@ -1,4 +1,6 @@
 # igniter-go-libs
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkangc666%2Ftrojan-go-libs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkangc666%2Ftrojan-go-libs?ref=badge_shield)
+
 
 ## How to build it？
 
@@ -105,3 +107,7 @@ Please make sure to change at least one golang source by adding whitespaces or l
 
 The go tools notify `*.go` changes, it will recompile the C/C++ sources.
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkangc666%2Ftrojan-go-libs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkangc666%2Ftrojan-go-libs?ref=badge_large)
